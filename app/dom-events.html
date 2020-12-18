@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+  <title>Document</title>
+
+  <style>
+    .trough {
+      text-decoration: line-through;
+    }
+    li {
+      margin-bottom: 10px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+<body>
+
+
+ <div id="wrapper">
+  <div class="contain">
+    <h1>H1</h1>
+    <ul>
+      <li class="li-1" title="js">js</li> 
+      <li title="css">css</li> 
+      <li title="html">html</li> 
+      <li title="php">php</li> 
+    </ul>
+  </div>
+</div>
+
+
+<script>
+
+  /*<script src="js/common.js" defer> так скрипт загружается, но не запускается, ппока всястраница не загрузится*/
+
+ //const head = document.getElementsByTagName('div');
+ //получаем все элементы м именем тэга див
+ //console.log(head[0]); индекс это порядок элемента в коллекции
+ //const head = document.getElementsByClassName('wrapper');
+ //const head = document.getElementById('wrapper');
+ const clas = document.querySelector('.contain');
+ const id = document.querySelector('#wrapper');
+ const list = document.querySelector('ul');
+ const h1 = document.querySelector('h1');
+ const title = document.querySelector('[title="js"]');
+ const all = document.querySelectorAll('li');
+ console.log(clas);
+ console.log(id);
+ console.log(h1);
+ console.log(title);
+ console.log(all);
+ console.log(clas.className);
+//replace class
+id.className = 'red';
+//add dop class
+clas.classList.add('blue');
+//remove class
+clas.classList.remove('contain');
+//toggle class
+clas.classList.toggle('toggle');
+//есть ли такой класс у элемента true/false
+clas.classList.contains('row');
+//add css value
+h1.style.textDecoration = 'underline';
+//выбор селектора внутри уже выбранного объекта
+const listItem = list.querySelector('.li-1');
+
+//console.log(listItem);
+
+const li = list.querySelectorAll('li');
+
+//перебор коллекции
+for (let i = 0; i < li.length; i++) {
+  //console.log(li[i]);
+  //слушается событие на каждом
+  //стрелочная функция внутри. можно и обычную
+  li[i].addEventListener('click', () => {
+    li[i].classList.toggle('trough');
+  });
+
+/*
+Вариант с обычной функцией
+  li[i].addEventListener('click', function () {
+    li[i].classList.toggle('trough');
+  });
+  */
+
+}
+
+</script>
+
+
+
+</body>
+</html>

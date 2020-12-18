@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+  <title>Калькулятор</title>
+
+  
+  <script src="js/calc.js" defer></script>
+  <link rel="stylesheet" href="css/calc.css">
+</head>
+<body>
+
+
+ <div id="wrapper">
+  <div class="contain">
+
+    <div class="start-elems">
+      <h1>Рассчитать стоимость разработки сайта</h1>
+      <p>Расскажите о сайте</p>
+      <button class="start-button">Рассчитать</button>
+    </div>
+
+    <section class="main-form">
+      <form class="form-calculate" action="calc.php" method="POST">
+        <h3>Form</h3>
+        <fieldset>
+        <input type="text" class="calc-input">  
+        </fieldset>
+        <fieldset>          
+          <label>            
+          <input type="checkbox" class="want-faster">
+          <span>Хочу быстрее</span>
+        </label>
+
+        </fieldset>
+
+        <div class="fast-range" style="display: none;">
+          Ползунок fast range
+        </div><!--fast-range-->
+
+        <div class="total">
+Total
+        </div>
+        <a href="#" class="butt end-button">Отправить заявку</a>
+      </form>
+    </section>
+    
+
+
+  </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
