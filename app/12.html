@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Petr pract 12 less</title>
+</head>
+
+<body>
+
+
+  <div id="wrapper">
+    <div class="contain">
+
+    </div>
+  </div>
+
+
+
+  <script>
+
+  //const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+  
+  const numberOfFilms = '';
+  let personalMovieDb = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false,
+  }
+
+  //console.log(personalMovieDb.genres);
+
+
+  
+  let a = prompt('Один из последних фильмов', ''),
+  b = prompt('На сколько оцените него от 0 до 10', ''),
+  c = prompt('Один из последних фильмов', ''),
+  d = prompt('На сколько оцените него от 0 до 10', '');
+  
+
+  //задавать значения обьекта лучше через квадратные скобки, так можно избежать багов с кириллицей и другими символами, есчли вдруг в название свойства обьекта они попадут
+  personalMovieDb.movies[a] = b;
+  personalMovieDb.movies[c] = d;
+
+
+  console.log(personalMovieDb);
+
+  </script>
+
+
+</body>
+
+</html>
